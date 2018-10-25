@@ -1,4 +1,5 @@
 const PubSub = require("../helpers/pub_sub.js");
+const MunroView = require("./munro_view.js");
 
 const MunroListView = function (container) {
   this.container = container;
@@ -16,7 +17,11 @@ MunroListView.prototype.bindEvents = function () {
 
 MunroListView.prototype.render = function () {
   this.munros.forEach((munro) => {
-    // do stuff with data
+    const munroView = new MunroView(this.container, munro);
+      // create Munro view
+      // pass in munro data
+    munroView.render();
+      // .render
   });
 };
 
