@@ -8,10 +8,15 @@ const Munros = function () {
 Munros.prototype.getData = function () {
   const requestHelper = new RequestHelper("https://munroapi.herokuapp.com/api/munros");
   requestHelper.get( (data) => {
+    // data is array of munro objects
+      // with keys: name
+      //            meaning
+      //            height
 
-    // manipulate the retrieved data
+    // save or manipulate data
+    this.munros = data;
 
-    // publish to channel
+    // publish data to channel
     PubSub.publish("MunroListView:munro-data-ready", this.munros);
   });
 };
