@@ -24,14 +24,15 @@ ul {
 
 #munro-list {
   display: grid;
-  grid-template-areas: "munro munro";
+  /* grid-template-areas: "munro munro"; */
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
 }
 
 .munro-container {
   padding: 15px 7px;
+  /* grid-area: munro; */
   border: 2px solid GoldenRod;
   border-radius: 15px;
-  background-color: rgba(115, 180, 202, 0.5);
+  background-color: rgba(115, 180, 202, 0.6);
 }

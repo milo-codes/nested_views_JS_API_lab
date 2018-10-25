@@ -24,12 +24,12 @@ MunroView.prototype.render = function () {
 
   const meaning = document.createElement("li");
   meaning.classList.add("munro-detail");
-  meaning.textContent = this.munro.meaning;
+  meaning.textContent = `MEANING: ${ this.munro.meaning }`;
   munroList.appendChild(meaning);
 
   const height = document.createElement("li");
   height.classList.add("munro-detail");
-  height.textContent = this.munro.height;
+  height.textContent = `HEIGHT: ${ this.munro.height }`;
   munroList.appendChild(height);
 };
 
